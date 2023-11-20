@@ -114,10 +114,20 @@ public class Schiff {
     }
 
     public void print() {
-
+        System.out.println(this);
     }
 
     public String toString() {
-        return null;
+        return switch (this.getTyp()) {
+            case 's' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
+                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString();
+            case 'b' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
+                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + this.pirat3.toString();
+            case 'f' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
+                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + "\n" + this.pirat3.toString() + "\n" + this.pirat4.toString();
+            case 'g' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
+                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + "\n" + this.pirat3.toString() + "\n" + this.pirat4.toString() + "\n" + this.pirat5.toString();
+            default -> throw new IllegalArgumentException("Falsche Bezeichnung!");
+        };
     }
 }

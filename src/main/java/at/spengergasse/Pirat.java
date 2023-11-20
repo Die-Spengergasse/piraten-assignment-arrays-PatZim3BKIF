@@ -13,7 +13,7 @@ public class Pirat {
     }
 
     public void setName(String name) {
-        if (name == null || name.equals("")) {
+        if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Name darf nicht leer oder null sein!");
         }
         this.name = name;
@@ -43,7 +43,7 @@ public class Pirat {
     }
 
     public void Kielholen() {
-        if (this.holzbein == true) {
+        if (this.holzbein) {
             if (this.gesundheit - 95 < 0) {
                 setGesundheit(0);
                 System.out.println("Pirat " + this.name + " stieg in Davy Jone's Kiste");
@@ -97,26 +97,32 @@ public class Pirat {
     }
 
     public void print() {
-        toString();
+        System.out.println(this);
     }
 
     public String toString() {
         String toReturn;
         String gesundheitsInfo;
         String holzbeinInfo;
-        if (this.holzbein == true) {
+
+        //Holzbeininfo
+        if (holzbein) {
             holzbeinInfo = ", Holzbein";
         } else {
             holzbeinInfo = ", Zweifüßer";
         }
+
+        //Gesundheitsinfo
         if (this.gesundheit > 0 && this.gesundheit <= 10) {
             gesundheitsInfo = "- hisst den Yellow Jack";
         } else if (this.gesundheit == 0) {
             gesundheitsInfo = "X - sprang in die Kiste";
         } else {
-            gesundheitsInfo = this.gesundheit + " % ";
+            gesundheitsInfo = this.gesundheit + " %";
         }
-        toReturn = "`Aye` - Trunkenbold " + this.name + " meldet sich an Board! " + gesundheitsInfo + " " + holzbeinInfo;
+
+        //Rückgabewert
+        toReturn = "`Aye` - Trunkenbold " + this.name + " meldet sich an Board! " + gesundheitsInfo + holzbeinInfo;
 
         return toReturn;
     }
