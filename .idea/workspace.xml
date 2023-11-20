@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48ae8de3-8df8-4b32-a660-f5a31bdd696c" name="Changes" comment="Piratenbeispiel ohne array fertig">
+    <list default="true" id="48ae8de3-8df8-4b32-a660-f5a31bdd696c" name="Changes" comment="Piratenbeispiel ohne array">
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/spengergasse/PiratTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/spengergasse/SchiffTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/spengergasse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/spengergasse/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/spengergasse/Pirat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/spengergasse/Pirat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/spengergasse/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/spengergasse/TestPirat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/spengergasse/TestSchiff.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +91,7 @@
       <recent name="at.spengergasse" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PiratTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="at.spengergasse.Main" />
       <module name="pos-java-kif-piratenschiff" />
@@ -98,9 +105,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PiratTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pos-java-kif-piratenschiff" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.spengergasse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.spengergasse" />
+      <option name="MAIN_CLASS_NAME" value="at.spengergasse.PiratTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PiratTest.kielholen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pos-java-kif-piratenschiff" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.spengergasse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.spengergasse" />
+      <option name="MAIN_CLASS_NAME" value="at.spengergasse.PiratTest" />
+      <option name="METHOD_NAME" value="kielholen" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PiratTest.setGesundheit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pos-java-kif-piratenschiff" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.spengergasse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.spengergasse" />
+      <option name="MAIN_CLASS_NAME" value="at.spengergasse.PiratTest" />
+      <option name="METHOD_NAME" value="setGesundheit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PiratTest.setHolzbein" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pos-java-kif-piratenschiff" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.spengergasse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.spengergasse" />
+      <option name="MAIN_CLASS_NAME" value="at.spengergasse.PiratTest" />
+      <option name="METHOD_NAME" value="setHolzbein" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PiratTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PiratTest.kielholen" />
+        <item itemvalue="JUnit.PiratTest.setHolzbein" />
+        <item itemvalue="JUnit.PiratTest.setGesundheit" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700476057434</updated>
       <workItem from="1700476058826" duration="2171000" />
-      <workItem from="1700491033453" duration="5335000" />
+      <workItem from="1700491033453" duration="6919000" />
     </task>
     <task id="LOCAL-00001" summary="first commit piraten">
       <option name="closed" value="true" />
@@ -139,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700496659743</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Piratenbeispiel ohne array">
+      <option name="closed" value="true" />
+      <created>1700497397292</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700497397292</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +241,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit piraten" />
     <MESSAGE value="Piratenbeispiel ohne array fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Piratenbeispiel ohne array fertig" />
+    <MESSAGE value="Piratenbeispiel ohne array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Piratenbeispiel ohne array" />
   </component>
 </project>

@@ -6,6 +6,8 @@ public class Pirat {
     private int gesundheit;
     private boolean holzbein;
 
+
+
     public Pirat(String name, int gesundheit, boolean holzbein) {
         setName(name);
         setGesundheit(gesundheit);
@@ -27,7 +29,7 @@ public class Pirat {
     }
 
     public void setHolzbein(boolean holzbein) {
-        this.name = name;
+        this.holzbein = holzbein;
     }
 
     public String getName() {
@@ -42,7 +44,7 @@ public class Pirat {
         return this.holzbein;
     }
 
-    public void Kielholen() {
+    public void kielholen() {
         if (this.holzbein) {
             if (this.gesundheit - 95 < 0) {
                 setGesundheit(0);
