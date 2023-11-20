@@ -67,7 +67,7 @@ public class Pirat {
 
     public void trinken(char getränk) {
         switch (getränk) {
-            case 'w':
+            case 'w' -> {
                 if (this.gesundheit - 10 < 0) {
                     throw new IllegalArgumentException("Haudegen " + this.name + " kann jetzt kein Wasser trinken!");
                 }
@@ -75,8 +75,8 @@ public class Pirat {
                 if (this.gesundheit == 0) {
                     System.out.println("Haudegen " + this.name + " ging über die Planke");
                 }
-                break;
-            case 'g':
+            }
+            case 'g' -> {
                 if (this.gesundheit + 10 >= 100) {
                     throw new IllegalArgumentException("Haudegen " + this.name + " kann jetzt keinen Grog 'g' trinken!");
                 }
@@ -84,15 +84,14 @@ public class Pirat {
                 if (this.gesundheit == 100) {
                     System.out.println("Haudegen " + this.name + " erfreut sich voller Gesundheit");
                 }
-                break;
-            case 'r':
+            }
+            case 'r' -> {
                 if (this.gesundheit + 20 >= 100) {
                     throw new IllegalArgumentException("Haudegen " + this.name + " kann gerade keinen Rum 'r' trinken, versuchen sie Grog 'g'!");
                 }
                 this.gesundheit = gesundheit + 20;
-                break;
-            default:
-                throw new IllegalArgumentException("Es darf nur 'w', 'g' oder 'r' getrunken werden!");
+            }
+            default -> throw new IllegalArgumentException("Es darf nur 'w', 'g' oder 'r' getrunken werden!");
         }
     }
 

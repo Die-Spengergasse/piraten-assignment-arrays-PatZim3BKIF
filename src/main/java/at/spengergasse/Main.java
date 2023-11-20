@@ -10,6 +10,7 @@ public class Main {
         Pirat edward = new Pirat("Edward", 100, false);
         Pirat john = new Pirat("John",100,true);
         Pirat albert = new Pirat("Albert", 100, false);
+
         schaluppe.anheuern(edward);
         schaluppe.anheuern(fred);
         schaluppe.anheuern(john);

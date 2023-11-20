@@ -19,24 +19,24 @@ public class Schiff {
 
     public void setTyp(char typ) {
         switch (typ) {
-            case 's':
+            case 's' -> {
                 this.typ = typ;
                 kanonenKlarmachen(1);
-                break;
-            case 'b':
+            }
+            case 'b' -> {
                 this.typ = typ;
                 kanonenKlarmachen(2);
-                break;
-            case 'f':
+            }
+            case 'f' -> {
                 this.typ = typ;
                 kanonenKlarmachen(5);
-                break;
-            case 'g':
+            }
+            case 'g' -> {
                 this.typ = typ;
                 kanonenKlarmachen(8);
-                break;
-            default:
-                throw new IllegalArgumentException("Arrgh! Schaebige Schnigge vom Typ " + typ + " ist nicht würdig gesegelt zu werden!");
+            }
+            default ->
+                    throw new IllegalArgumentException("Arrgh! Schaebige Schnigge vom Typ " + typ + " ist nicht würdig gesegelt zu werden!");
         }
     }
 
@@ -54,7 +54,7 @@ public class Schiff {
 
     public void anheuern(Pirat pirat) {
         switch (this.typ) {
-            case 's':
+            case 's' -> {
                 if (kapitaen == null) {
                     this.kapitaen = pirat;
                 } else if (pirat1 == null) {
@@ -64,8 +64,8 @@ public class Schiff {
                 } else {
                     throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
                 }
-                break;
-            case 'b':
+            }
+            case 'b' -> {
                 if (kapitaen == null) {
                     this.kapitaen = pirat;
                 } else if (pirat1 == null) {
@@ -77,8 +77,8 @@ public class Schiff {
                 } else {
                     throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
                 }
-                break;
-            case 'f':
+            }
+            case 'f' -> {
                 if (kapitaen == null) {
                     this.kapitaen = pirat;
                 } else if (pirat1 == null) {
@@ -92,8 +92,8 @@ public class Schiff {
                 } else {
                     throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
                 }
-                break;
-            case 'g':
+            }
+            case 'g' -> {
                 if (kapitaen == null) {
                     this.kapitaen = pirat;
                 } else if (pirat1 == null) {
@@ -109,7 +109,7 @@ public class Schiff {
                 } else {
                     throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
                 }
-                break;
+            }
         }
     }
 

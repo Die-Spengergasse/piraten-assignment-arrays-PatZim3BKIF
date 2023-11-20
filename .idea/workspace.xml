@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48ae8de3-8df8-4b32-a660-f5a31bdd696c" name="Changes" comment="first commit piraten">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="48ae8de3-8df8-4b32-a660-f5a31bdd696c" name="Changes" comment="Piratenbeispiel ohne array fertig">
       <change beforePath="$PROJECT_DIR$/src/main/java/at/spengergasse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/spengergasse/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/spengergasse/Pirat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/spengergasse/Pirat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/spengergasse/Schiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/spengergasse/Schiff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700476057434</updated>
       <workItem from="1700476058826" duration="2171000" />
-      <workItem from="1700491033453" duration="4955000" />
+      <workItem from="1700491033453" duration="5335000" />
     </task>
     <task id="LOCAL-00001" summary="first commit piraten">
       <option name="closed" value="true" />
@@ -134,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700491428856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Piratenbeispiel ohne array fertig">
+      <option name="closed" value="true" />
+      <created>1700496659743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700496659743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit piraten" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit piraten" />
+    <MESSAGE value="Piratenbeispiel ohne array fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Piratenbeispiel ohne array fertig" />
   </component>
 </project>
