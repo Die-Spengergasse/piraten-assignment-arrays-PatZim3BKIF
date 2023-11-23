@@ -4,6 +4,8 @@ public class Schiff {
     private int kanonen;
     private char typ;
     private Pirat kapitaen;
+
+    private Pirat[] crew;
     private Pirat pirat1;
     private Pirat pirat2;
     private Pirat pirat3;
@@ -21,18 +23,22 @@ public class Schiff {
         switch (typ) {
             case 's' -> {
                 this.typ = typ;
+                crew = new Pirat[2];
                 kanonenKlarmachen(1);
             }
             case 'b' -> {
                 this.typ = typ;
+                crew = new Pirat[3];
                 kanonenKlarmachen(2);
             }
             case 'f' -> {
                 this.typ = typ;
+                crew = new Pirat[4];
                 kanonenKlarmachen(5);
             }
             case 'g' -> {
                 this.typ = typ;
+                crew = new Pirat[5];
                 kanonenKlarmachen(8);
             }
             default ->
@@ -53,64 +59,18 @@ public class Schiff {
     }
 
     public void anheuern(Pirat pirat) {
-        switch (this.typ) {
-            case 's' -> {
-                if (kapitaen == null) {
-                    this.kapitaen = pirat;
-                } else if (pirat1 == null) {
-                    this.pirat1 = pirat;
-                } else if (pirat2 == null) {
-                    this.pirat2 = pirat;
-                } else {
-                    throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
-                }
-            }
-            case 'b' -> {
-                if (kapitaen == null) {
-                    this.kapitaen = pirat;
-                } else if (pirat1 == null) {
-                    this.pirat1 = pirat;
-                } else if (pirat2 == null) {
-                    this.pirat2 = pirat;
-                } else if (pirat3 == null) {
-                    this.pirat3 = pirat;
-                } else {
-                    throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
-                }
-            }
-            case 'f' -> {
-                if (kapitaen == null) {
-                    this.kapitaen = pirat;
-                } else if (pirat1 == null) {
-                    this.pirat1 = pirat;
-                } else if (pirat2 == null) {
-                    this.pirat2 = pirat;
-                } else if (pirat3 == null) {
-                    this.pirat3 = pirat;
-                } else if (pirat4 == null) {
-                    this.pirat4 = pirat;
-                } else {
-                    throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
-                }
-            }
-            case 'g' -> {
-                if (kapitaen == null) {
-                    this.kapitaen = pirat;
-                } else if (pirat1 == null) {
-                    this.pirat1 = pirat;
-                } else if (pirat2 == null) {
-                    this.pirat2 = pirat;
-                } else if (pirat3 == null) {
-                    this.pirat3 = pirat;
-                } else if (pirat4 == null) {
-                    this.pirat4 = pirat;
-                } else if (pirat5 == null) {
-                    this.pirat5 = pirat;
-                } else {
-                    throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
-                }
+
+        if (kapitaen == null) {
+            this.kapitaen = pirat;
+            return;
+        }
+        for (int i = 0; i < crew.length; i++) {
+            if (crew[i] == null) {
+                crew[i] = pirat;
+                return;
             }
         }
+        throw new IllegalArgumentException("Kein Grog mehr fuer den Trunkenbold! Voll besetzt! " + typ);
     }
 
     public void print() {
@@ -118,16 +78,20 @@ public class Schiff {
     }
 
     public String toString() {
-        return switch (this.getTyp()) {
-            case 's' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
-                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString();
-            case 'b' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
-                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + this.pirat3.toString();
-            case 'f' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
-                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + "\n" + this.pirat3.toString() + "\n" + this.pirat4.toString();
-            case 'g' -> "Crew Schaluppe (3): " + "\n" + "______________________" + "\n" +
-                    this.kapitaen.toString() + "\n" + this.pirat1.toString() + "\n" + this.pirat2.toString() + "\n" + this.pirat3.toString() + "\n" + this.pirat4.toString() + "\n" + this.pirat5.toString();
+        String toReturn = "";
+
+        switch (this.getTyp()) {
+            case 's' -> toReturn = "Crew Schaluppe (3): " + "\n" + "______________________" + "\n";
+            case 'b' -> toReturn = "Crew Brigg (4): " + "\n" + "______________________" + "\n";
+            case 'f' -> toReturn = "Crew Fregatte (5): " + "\n" + "______________________" + "\n";
+            case 'g' -> toReturn = "Crew Galeone (6): " + "\n" + "______________________" + "\n";
             default -> throw new IllegalArgumentException("Falsche Bezeichnung!");
         };
+        toReturn += this.kapitaen.toString() + "\n";
+
+        for (int i = 0; i < crew.length; i++) {
+            toReturn += crew[i].toString() + "\n";
+        }
+        return toReturn;
     }
 }

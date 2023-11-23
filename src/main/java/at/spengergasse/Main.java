@@ -15,8 +15,8 @@ public class Main {
         schaluppe.anheuern(fred);
         schaluppe.anheuern(john);
 
-        //schaluppe.print();
-        fred.print();
+        schaluppe.print();
+        //fred.print();
 
     }
 }
